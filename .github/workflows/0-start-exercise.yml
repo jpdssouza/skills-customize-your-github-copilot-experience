@@ -59,7 +59,7 @@ jobs:
             fs.writeFileSync('config.json', JSON.stringify(config, null, 2) + '\n');
 
       - name: Commit updated config.json
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9
         with:
           add: "config.json"
           message: "Atualizar datas de entrega das tarefas para início do exercício"
@@ -85,7 +85,7 @@ jobs:
           ref: v0.7.0
 
       - name: Create comment - add step content
-        uses: GrantBirki/comment@v2.1.1
+        uses: GrantBirki/comment@608e41b19bc973020ec0e189ebfdae935d7fe0cc # v2.1.1
         with:
           repository: ${{ env.ISSUE_REPOSITORY }}
           issue-number: ${{ env.ISSUE_NUMBER }}
